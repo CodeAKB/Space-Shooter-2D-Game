@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cxcgvp2ewisbs"]
+
+[ext_resource type="Script" uid="uid://ds5eb7fqhwvmi" path="res://GameOver/game_over.gd" id="1_dyh6w"]
+[ext_resource type="Texture2D" uid="uid://ce6y8hiicsbai" path="res://Space Shooter/background-black.png" id="1_g2khx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jn8a"]
+bg_color = Color(0.6, 0.047058824, 0.40784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dyh6w"]
+bg_color = Color(0.6, 1, 0.6, 1)
+
+[node name="Game_over" type="Node2D" unique_id=40205955]
+process_mode = 3
+script = ExtResource("1_dyh6w")
+
+[node name="BackgroundBlack" type="Sprite2D" parent="." unique_id=173168232]
+position = Vector2(298.5, 413)
+scale = Vector2(1.5624999, 2.0675)
+texture = ExtResource("1_g2khx")
+
+[node name="Label" type="Label" parent="." unique_id=1364928535]
+offset_left = 129.0
+offset_top = 246.0
+offset_right = 433.0
+offset_bottom = 342.0
+theme_override_colors/font_color = Color(1, 1, 0.52156866, 1)
+theme_override_colors/font_outline_color = Color(0, 0.6156863, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 1
+theme_override_font_sizes/font_size = 58
+text = "GAME OVER"
+
+[node name="Retry" type="Button" parent="." unique_id=1837120316]
+offset_left = 218.0
+offset_top = 387.0
+offset_right = 365.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jn8a")
+text = "RETRY"
+
+[node name="MainMenu" type="Button" parent="." unique_id=1605845383]
+offset_left = 175.0
+offset_top = 471.0
+offset_right = 422.0
+offset_bottom = 540.0
+theme_override_colors/font_color = Color(0.8745098, 0.31764707, 0.17254902, 1)
+theme_override_colors/font_outline_color = Color(0, 0.57254905, 0, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxFlat_dyh6w")
+text = "Main Menu"
+
+[connection signal="pressed" from="Retry" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

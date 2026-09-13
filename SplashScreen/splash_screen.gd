@@ -1,0 +1,14 @@
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	# 1. Wait silently in the background for 3 seconds
+	await get_tree().create_timer(3.0).timeout
+	# 2. Automatically load and switch to your Main Menu scene!
+	get_tree().change_scene_to_file("res://Main_Scene/Main_Menu.tscn")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass

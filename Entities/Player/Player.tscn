@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ouxsv4v68ul7"]
+
+[ext_resource type="Script" uid="uid://c1itpi1ho06wm" path="res://Entities/Player/player.gd" id="1_ww0jn"]
+[ext_resource type="Texture2D" uid="uid://ca5m71hl7e4fw" path="res://Space Shooter/spacepixels-0.2.0/pixel_ship_yellow.png" id="1_xhfnw"]
+
+[node name="player" type="Node2D" unique_id=1406151245]
+script = ExtResource("1_ww0jn")
+
+[node name="PixelShipYellow" type="Sprite2D" parent="." unique_id=1184235161]
+scale = Vector2(0.5027778, 0.50277776)
+texture = ExtResource("1_xhfnw")

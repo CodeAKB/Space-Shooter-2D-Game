@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://daef6kuoxkpxy"]
+
+[ext_resource type="Texture2D" uid="uid://bm64k06xif81o" path="res://Space Shooter/spacepixels-0.2.0/pixel_ship_blue.png" id="1_2l5c5"]
+[ext_resource type="Script" uid="uid://b06kt1oa7jmjo" path="res://Entities/Enmies/enemy.gd" id="1_chnmo"]
+
+[node name="Enemy_Area2D" type="Area2D" unique_id=1710653153]
+script = ExtResource("1_chnmo")
+
+[node name="PixelShipBlue" type="Sprite2D" parent="." unique_id=772055288]
+rotation = -3.1415927
+scale = Vector2(0.503, 0.503)
+texture = ExtResource("1_2l5c5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=543034070]
+scale = Vector2(1, 1.2019231)
+polygon = PackedVector2Array(0, 18, 21, -8, 21, -8, -21, -8, -21, -8)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bpcgx7irltf1i"]
+
+[ext_resource type="Texture2D" uid="uid://ce6y8hiicsbai" path="res://Space Shooter/background-black.png" id="1_70yv6"]
+[ext_resource type="PackedScene" uid="uid://ouxsv4v68ul7" path="res://Entities/Player/Player.tscn" id="2_smx3j"]
+[ext_resource type="Texture2D" uid="uid://d2vfhkxrm2dds" path="res://Space Shooter/spacepixels-0.2.0/horizontal_bar_blue.png" id="3_o2178"]
+[ext_resource type="PackedScene" uid="uid://cj3mx8x36d6qa" path="res://Entities/Enemies_Spawner/enemy_spawner.tscn" id="4_vk86k"]
+[ext_resource type="Script" uid="uid://duqbhy6wsujt7" path="res://Entities/Enemies_Spawner/enemy_spawner.gd" id="5_shwjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqrtc"]
+size = Vector2(608, 16)
+
+[node name="Game Manager" type="Node2D" unique_id=1182805844]
+
+[node name="BackgroundBlack" type="Sprite2D" parent="." unique_id=526848890]
+position = Vector2(298, 403.99997)
+scale = Vector2(1.5625002, 2.0724998)
+texture = ExtResource("1_70yv6")
+
+[node name="player" parent="." unique_id=1406151245 instance=ExtResource("2_smx3j")]
+position = Vector2(296, 768)
+
+[node name="Boundary" type="Area2D" parent="." unique_id=306806441]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=1648236447]
+position = Vector2(304, 648)
+shape = SubResource("RectangleShape2D_vqrtc")
+
+[node name="HorizontalBarBlue" type="Sprite2D" parent="Boundary" unique_id=344418708]
+position = Vector2(304, 648)
+scale = Vector2(4.6769233, 1.5999981)
+texture = ExtResource("3_o2178")
+
+[node name="Bullets" type="Node" parent="." unique_id=1282298652]
+
+[node name="Enemies" type="Node" parent="." unique_id=1614937008]
+
+[node name="EnemySpawner" parent="." unique_id=524652157 instance=ExtResource("4_vk86k")]
+script = ExtResource("5_shwjl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2134067974]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1243160369]
+offset_right = 144.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "Score: 0"

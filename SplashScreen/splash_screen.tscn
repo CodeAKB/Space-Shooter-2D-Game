@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ks2ryo81t0nv"]
+
+[ext_resource type="Script" uid="uid://o80ci7kmyvbi" path="res://SplashScreen/splash_screen.gd" id="1_g5j7x"]
+
+[sub_resource type="FontVariation" id="FontVariation_vqrtc"]
+
+[node name="SplashScreen" type="Control" unique_id=1677544361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g5j7x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=368359553]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=418405801]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 376.0
+offset_right = 555.0
+offset_bottom = 528.0
+theme_override_fonts/font = SubResource("FontVariation_vqrtc")
+theme_override_font_sizes/font_size = 41
+text = "PRODUCTION BY CodeAKB"

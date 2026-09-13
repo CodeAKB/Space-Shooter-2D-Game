@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d4jmc2nmlshb1"]
+
+[ext_resource type="Texture2D" uid="uid://bhnnoiiofcqif" path="res://Space Shooter/PixelSpaceArt/PixelMonotone.jpg" id="1_1y6ef"]
+[ext_resource type="Script" uid="uid://buw8a4tgveeqk" path="res://Main_Scene/main_menu.gd" id="1_awj2t"]
+[ext_resource type="Texture2D" uid="uid://3knsljluyika" path="res://Space Shooter/PixelSpaceArt/PixelSpaceArt.jpg" id="2_awj2t"]
+
+[node name="MainMenu" type="Node" unique_id=544299150]
+script = ExtResource("1_awj2t")
+
+[node name="PixelMonotone" type="Sprite2D" parent="." unique_id=2081389390]
+position = Vector2(296.70898, 402.05032)
+rotation = 1.5707964
+scale = Vector2(0.2554018, 0.3386567)
+texture = ExtResource("1_1y6ef")
+
+[node name="PixelSpaceArt" type="Sprite2D" parent="." unique_id=1532499881]
+position = Vector2(292, 284)
+scale = Vector2(0.052500002, 0.057777774)
+texture = ExtResource("2_awj2t")
+
+[node name="Button" type="Button" parent="." unique_id=579501587]
+offset_left = 208.0
+offset_top = 232.0
+offset_right = 376.0
+offset_bottom = 336.0
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
